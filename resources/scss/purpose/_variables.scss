@@ -12,7 +12,7 @@ $gray-300: #E5E9F2 !default;
 $gray-400: #E0E6ED !default;
 $gray-500: #D3DCE6 !default;
 $gray-600: #C0CCDA !default;
-$gray-700: #8492A6 !default;    // Used for text color
+$gray-700: #9DAFBD !default;    // Used for text color
 $gray-800: #3C4858 !default;    // Used for headings color
 $gray-900: #273444 !default;
 $black:    #1F2D3D !default;
@@ -30,7 +30,7 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays) !default;
 
-$blue:    #2684FF !default;
+$blue:    #326BD7 !default;
 $indigo:  #6e00ff !default;
 $purple:  #510FA8 !default;
 $pink:    #f074ad !default;
@@ -58,7 +58,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $indigo !default;
+$primary:       $blue !default;
 $secondary:     $gray-200 !default;
 $neutral:       $white !default;
 $success:       $green !default;
