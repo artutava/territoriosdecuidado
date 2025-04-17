@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
+    <meta name="author" content="Webpixels">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <!-- Additional fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <!-- Purpose CSS -->
+    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet">
+    <title>Territórios de cuidado</title>
+
+    <!-- LILITA ONE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'Gotham';
+        src: url('/assets/fonts/Gotham Fonts Family/GOTHAM-BLACK.TTF');
+      }
+
+      html, body {
+        height: 100vh;
+      }
+      body {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      @media (min-width: 768px) {
+        .footer-bg {
+          clip-path: polygon( 100% 99.998%,100% 82.656%,100% 82.656%,99.995% 82.217%,99.978% 81.783%,99.952% 81.354%,99.914% 80.932%,99.867% 80.52%,99.81% 80.117%,99.742% 79.726%,99.666% 79.348%,99.579% 78.986%,99.484% 78.639%,76.871% 2.25%,76.871% 2.25%,76.712% 1.768%,76.538% 1.339%,76.35% 0.967%,76.151% 0.652%,75.943% 0.397%,75.726% 0.203%,75.503% 0.073%,75.275% 0.008%,75.044% 0.009%,74.812% 0.08%,10.76% 29.182%,10.76% 29.182%,10.526% 29.325%,10.302% 29.535%,10.088% 29.808%,9.887% 30.142%,9.7% 30.532%,9.528% 30.976%,9.374% 31.468%,9.238% 32.007%,9.122% 32.588%,9.027% 33.208%,0% 100%,100% 100%,100% 99.998% );
+          padding-top: 10rem !important;
+          margin: 0 16px;
+
+          & > div.container {
+            max-width: 70%;
+          }
+        }
+      }
+
+      .hero-bg {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      @media (min-width: 768px) {
+        .hero-bg {
+          display: block;
+        }
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        margin: 48px 0;
+      }
+
+      .base-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 50vh;
+        gap: 20px;
+
+        & > h3 {
+          color: #326BD7;
+          text-transform: uppercase;
+          font-family: 'Lilita One', sans-serif;
+        }
+
+        & > span {
+          color: #9DAFBD;
+          font-size: 18px;
+          font-weight: medium;
+        }
+      }
+
+      .bold-cards-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .bold-card {
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex: 0 1 350px;
+        height: 300px;
+        padding: 32px 4px 24px 4px;
+
+        span {
+          font-size: 28px;
+          font-weight: 900;
+          color: white;
+          text-transform: uppercase;
+          text-align: center;
+          font-family: 'Lilita One', sans-serif;
+        }
+        
+        button {
+          text-transform: uppercase;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <script>
+      (function() {
+        try {
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", "header.html", false); // ❗ Make request synchronous (blocking)
+          xhr.send();
+          
+          if (xhr.status !== 200) throw new Error("Failed to load header.html");
+          
+          const temp = document.createElement('div');
+          temp.innerHTML = xhr.responseText;
+          
+          const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+        } catch (error) {
+          console.error(error);
+        }
+      })();
+    </script>
+
+     <!-- Header 1 -->
+     <div class="hero">
+      <section class="header-1 section-rotate bg-section-secondary" data-offset-top="#header-main">
+        <div class="section-inner bg-primary py-2"></div>
+        <!-- SVG illustration 1 -->
+        <div class="pt-7 position-absolute middle right-0 col-lg-7 col-xl-6 d-none d-lg-block">
+          <figure class="w-100" style="max-width: 500px;">
+            <img alt="Image placeholder" src="assets/img/backgrounds/hero.svg" class="svg-inject img-fluid">
+          </figure>
+        </div>
+        <!-- SVG illustration 2 -->
+        <div class="hero-bg">
+          <figure class="w-100" style="max-width: 500px;">
+            <img alt="Image placeholder" src="assets/img/backgrounds/hero-bg.svg" class="svg-inject img-fluid">
+          </figure>
+        </div>
+        <!-- Hero container -->
+        <div class="container py-5 pt-lg-6 d-flex align-items-center position-relative zindex-100">
+          <div class="col">
+            <div class="row">
+              <div class="col-lg-5 col-xl-6 text-center text-lg-left">
+                <div>
+                  <h2 class="text-white mb-4">
+                    <span class="display-6" style="font-family: Lilita One, sans-serif;">Saúde, Sustentabilidade <br /> e Saberes Locais</span>
+                  </h2>
+                  <p class="lead text-white" style="font-family: 'Gotham', sans-serif;">Saiba como o projeto esta promovendo cuidado, <br /> saúde e equidade nos territórios brasileiros</p>
+                  <div class="mt-5" style="display: flex;">
+                    <a href="#sct-page-examples" class="btn btn-white rounded-pill hover-translate-y-n3 btn-icon p-0 scroll-me" style="width: 48px; height: 48px; display: flex; justify-content: center; align-items: center; position: relative;">
+                      <span class="btn-inner--icon" style="position: absolute; transform: translate(2px, 0);"><i class="fa fa-play"></i></span>
+                    </a>
+                    <a href="#sct-features" class="btn btn-outline-white rounded-pill hover-translate-y-n3 btn-icon d-none d-xl-inline-block scroll-me">
+                      <span class="btn-inner--icon"><i class="fas fa-file-alt"></i></span>
+                      <span class="btn-inner--text">Ler mais</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- HEADER END -->
+
+    <!-- MAIN CONTENT START -->
+    <main>
+      <section class="container bold-cards-section">
+        <div class="bold-card" style="background-color: #026FC2;">
+          <span>Inscreva-se na formação</span>
+          <button class="btn btn-white rounded-pill" style="color: #026FC2;">Quero me inscrever</button>
+        </div>
+
+        <div class="bold-card" style="background-color: #469B49;">
+          <span>Acesse nossos materiais <br /> pedagógicos</span>
+          <button class="btn btn-white rounded-pill" style="color: #469B49;">Ver conteúdos</button>
+        </div>
+
+        <div class="bold-card" style="background-color: #EAB236;">
+          <span>Conheça os 15 territórios de <br />cuidado</span>
+          <button class="btn btn-white rounded-pill" style="color: #EAB236;">Ver no mapa</button>
+        </div>
+      </section>
+
+      <section class="container base-section">
+        <h3>Próximos eventos</h3>
+        <span>Não perca as novidades do nosso calendário.</span>
+        
+        <div></div>
+      </section>
+
+      <section class="container base-section">
+        <h3>Últimas notícias</h3>        
+        <div></div>
+      </section>
+
+      <section class="container base-section">
+        <h3>Números do projeto</h3>        
+        <div></div>
+      </section>
+
+      <section class="container base-section">
+        <h3>Parceiros</h3>
+        <span>Contamos com o apoio de movimentos sociais, universidades, secretarias estaduais e municipais, além de lideranças comunitárias e organizações locais.</span>   
+        <div></div>
+      </section>
+
+    </main>
+    <!-- MAIN CONTENT END -->
+
+    <!-- FOOTER START -->
+     <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+          try {
+              const response = await fetch('footer.html');
+              if (!response.ok) throw new Error("Failed to load footer.html");
+      
+              const html = await response.text();
+              const temp = document.createElement('div');
+              temp.innerHTML = html;
+      
+              const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
+              scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+          } catch (error) {
+              console.error(error);
+          }
+      });
+    </script>
+    <!-- FOOTER END -->
+  </body>
+
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="assets/js/purpose.core.js"></script>
+  <!-- Page JS -->
+  <script src="assets/libs/swiper/dist/js/swiper.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="assets/js/purpose.js"></script>
+</html>
