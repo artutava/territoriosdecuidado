@@ -124,6 +124,41 @@
         }
       }
 
+      /* HEADER TITLE START */
+      .page-header-container {
+        background-color: #E5EEFF;
+      }
+
+      .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        
+        & > h1 {
+          padding: 4rem 0;
+          font-family: 'Lilita One', sans-serif;
+          font-size: 48px;
+        }
+
+        & > div {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0,-50%);
+          min-height: 0;
+
+          & > img {
+            max-width: 200px;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      /* HEADER TITLE END */
+
+
     </style>
   </head>
 
@@ -148,25 +183,24 @@
         }
       })();
     </script>
-    <div id="headers-team" title="headers/team.html">
-      <section class="slice slice-lg overflow-hidden">
-        <!-- Container -->
-        <div class="container d-flex align-items-center justify-content-center">
-          <div class="col">
-            <div class="container">
-              <div class="row row-grid">
-                <div class="col-lg-5">
-                  <h1 class="display-4 text-primary" style="font-family: 'Lilita One', sans-serif;">Territórios</h1>
-                </div>
-              </div>
-            </div>
+
+    <!-- HEADER TITLE START  -->
+    <div class="page-header-container">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="text-primary">Territórios</h1>
+          
+          <div class="d-none d-md-block">
+            <img src="assets/img/territorios-header-img.svg" alt="">
           </div>
         </div>
-      </section>
+      </div>
     </div>
+    <!-- HEADER TITLE END -->
+
     <div class="bg-primary">
       <div class="container py-4">
-        <p class="text-white">Conheça os 15 territórios de cuidado que integram o nosso projeto. Saiba onde estamos atuando, quais ações estão em andamento e as redes locais envolvidas.</p>
+        <p class="text-white m-0 text-justify">Conheça os 15 territórios de cuidado que integram o nosso projeto. Saiba onde estamos atuando, quais ações estão em andamento e as redes locais envolvidas.</p>
       </div>
     </div>
 
