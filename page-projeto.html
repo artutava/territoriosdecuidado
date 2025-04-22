@@ -124,6 +124,41 @@
         }
       }
 
+      /* HEADER TITLE START */
+      .page-header-container {
+        position: relative;
+      }
+      
+      .green-border {
+        background-color: #E5EEFF;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        border-bottom: 1.25rem solid #469B49;
+      }
+
+      .page-header {
+        position: relative;
+
+        & > h1 {
+          padding: 4rem 0;
+          margin: 0;
+          font-family: 'Lilita One', sans-serif;
+          font-size: 48px;
+        }
+      }
+
+      .page-header-img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        right: 0;
+      }
+      /* HEADER TITLE END */
+
     </style>
   </head>
 
@@ -148,22 +183,19 @@
         }
       })();
     </script>
-    <div id="headers-team" title="headers/team.html">
-      <section class="slice slice-lg overflow-hidden">
-        <!-- Container -->
-        <div class="container d-flex align-items-center justify-content-center">
-          <div class="col">
-            <div class="container">
-              <div class="row row-grid">
-                <div class="col-lg-5">
-                  <h1 class="display-4 text-primary" style="font-family: 'Lilita One', sans-serif;">O Projeto</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+    <!-- HEADER TITLE START  -->
+    <div class="page-header-container">
+      <div class="container page-header">
+        <h1 class="text-primary">O Projeto</h1>
+        
+        <img src="assets/img/projeto-header-img.svg" class="page-header-img d-none d-md-block" alt="">
+      </div>
+      
+      <div class="green-border"></div>
     </div>
+    <!-- HEADER TITLE END -->
+
     <div id="headers-team" title="headers/team.html">
       <section class="slice slice-lg bg-primary overflow-hidden">
         <!-- Container -->
