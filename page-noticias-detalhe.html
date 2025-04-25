@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
+    <meta name="author" content="Webpixels">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <!-- Additional fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <!-- Common CSS through the pages-->
+    <link rel="stylesheet" href="global.css" id="stylesheet">
+    <!-- Purpose CSS -->
+    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet">
+    <title>Territórios de cuidado</title>
+
+    <!-- LILITA ONE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <style>
+      /* HEADER TITLE START */
+      .page-header-container {
+        background-color: #E5EEFF;
+      }
+
+      .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        
+        & > h1 {
+          padding: 4rem 0;
+          font-family: 'Lilita One', sans-serif;
+          font-size: 48px;
+        }
+
+        & > div {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0,-50%);
+          min-height: 0;
+
+          & > img {
+            max-width: 80px;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      /* HEADER TITLE END */
+
+      /* MAIN START */
+      .news-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .news-date {
+        font-family: 'Gotham';
+        font-size: 12px;
+        font-weight: 700;
+        color: #6D8394;
+      }
+      .news-title {
+        font-family: 'Gotham';
+        font-size: 28px;
+        font-weight: 400;
+        color: #4D99E2;
+        text-align: center;
+      }
+      .news-description {
+        font-family: 'Gotham';
+        font-size: 14px;
+        font-weight: 400;
+        color: #6D8394;
+        letter-spacing: 0.01rem;
+      }
+      .news-bg-mask {
+        background-color: #EEF2F4;
+      }
+
+      .author-title {
+        font-family: 'Gotham', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4D99E2;
+      }
+      .author-role {
+        font-family: 'Gotham', sans-serif;
+        font-size: 12px;
+      }
+
+      .img-description {
+        font-style: italic;
+      }
+      .img-responsive {
+        max-width: 100%;
+        object-fit: contain;
+      }
+      /* MAIN END */
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER START -->
+    <script>
+      (function() {
+        try {
+          const xhr = new XMLHttpRequest();
+          xhr.open("GET", "header.html", false); // ❗ Make request synchronous (blocking)
+          xhr.send();
+          
+          if (xhr.status !== 200) throw new Error("Failed to load header.html");
+          
+          const temp = document.createElement('div');
+          temp.innerHTML = xhr.responseText;
+          
+          const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+        } catch (error) {
+          console.error(error);
+        }
+      })();
+    </script>
+
+    <!-- HEADER TITLE START  -->
+    <div class="page-header-container">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="text-primary">Notícias</h1>
+          
+          <div class="d-none d-md-block">
+            <img src="assets/img/noticias-header-img.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HEADER TITLE END -->
+
+    <!-- MAIN CONTENT START -->
+    <main>
+      <div class="card text-white overflow-hidden shadow border-0">
+        <div class="card-img-bg" style="background-image: url('../..//assets/img/theme/light/city-1.jpg');"></div>
+        <span class="mask news-bg-mask opacity-9 hover-opacity-6"></span>
+        <div class="card-body d-flex justify-content-center px-5 py-5" style="min-height: 350px;">
+          <div class="d-flex flex-column justify-content-center align-items-center" style="max-width: 400px">
+            <h4 class="news-title">Projeto promove olhar para a saúde no campo, floresta e águas no Maranhão</h4>
+            <div class="d-flex flex-column justify-content-center align-items-center pt-4">
+              <span class="author-title">Júlio Pedrosa</span>
+              <span class="author-role">Fiocruz Amazônia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="container py-8 overflow-hidden text-dark">
+        <p>Com a finalidade de promover a formação de trabalhadores e trabalhadoras que atuam no cuidado em saúde das populações do campo, floresta e águas, o projeto Começo Meio Começo vem atuando em 33 polos educacionais em oito estados brasileiros (Tocantins, Maranhão, Acre, Amapá, Rondônia, Roraima, Pará e Amazonas). A capital e o interior do Maranhão receberam (19/3 e 2/4) encontros presenciais nos quais foram tratadas temáticas diversas, ligadas ao cotidiano de cada território, como violência, injustiça e racismo ambiental. Desenvolvido pela Fiocruz Amazônia em parceria com o Ministério da Saúde (MS), o projeto conta com o apoio do Cosems-PA, Cosems-AC e Cosems-AM.  </p>
+        <div class="py-3 mw-100">
+          <img class="pb-3 img-responsive" src="/assets/img/noticia-single.jpg" alt="O município de Pinheiro foi o polo escolhido para receber a equipe de facilitadores do projeto e os profissionais de saúde de aproximadamente 50 municípios do interior maranhense (foto: Divulgação)">
+          <p class="img-description">O município de Pinheiro foi o polo escolhido para receber a equipe de facilitadores do projeto e os profissionais de saúde de aproximadamente 50 municípios do interior maranhense (foto: Divulgação)</p>
+        </div>
+        <p>Situado às margens da Baia de São Marcos, na Baixada Maranhense, o município de Pinheiro, a 113 quilômetros de São Luís, no Maranhão, foi o polo escolhido para receber a equipe de facilitadores do projeto e os profissionais de saúde de aproximadamente 50 municípios do interior maranhense. No Estado, foram contempladas seis turmas de profissionais de saúde, com mais de 300 trabalhadores e trabalhadoras reunidos, em São Luiz e Pinheiro. Participaram agentes comunitários de saúde, enfermeiros, técnicos de enfermagem, médicos e gestores. A coordenadora estadual do Começo Meio Começo, no Maranhão, Ana Lúcia Nunes, da Escola de Saúde Pública do Estado, destaca a importância da iniciativa para os territórios com campos, florestas e águas do Maranhão.  </p>
+        <p>“Sediamos dois módulos presenciais do projeto de formação, sendo o primeiro em São Luís, com duas turmas e mais de 96 participantes, e o segundo, o município de Pinheiro, com dois momentos, o primeiro com três turmas, com mais de 100 participantes e o segundo modulo presencial com 102 presentes oriundos de mais de 50 municípios do Estado com essas características”, ressalta Ana Lúcia, acrescentando que a dinâmica do curso mobiliza e estimula os trabalhadores e trabalhadoras a pensarem seus territórios a partir das cartografias apresentadas. “É para isso que os processos formativos servem: dar sentido, voz e vez aos usuários do sistema de saúde em suas múltiplas diversidades, servindo para responder as necessidades do Sistema Único de Saúde [SUS]”, pontuou. </p>
+        <p class="text-primary font-weight-bold">Publicação</p>
+        <p>Ao final, todas as vivências dos alunos, facilitadores e coordenadores serão consubstanciadas em uma publicação. Coordenador do projeto Começo Meio Começo, Júlio Schweickardt, que acompanhou as atividades, aponta que as experiências das formações têm sido bastante produtivas na busca de um resgate e na revalorização do SUS em territórios peculiares como o da floresta, campo e águas. </p>
+        <p>“Estamos atuando de forma simultânea em diferentes territórios, com atividades já realizadas em Tocantins (MS), Parintins e Tefé (AM), Abaetetuba e Belém (PA), São Luiz e Pinheiro (MA) e Porto Velho (RO), numa verdadeira força tarefa para conseguir reunir as equipes, com o apoio das secretarias municipais de Saúde, por meio do Conselho de Secretários de Saúde dos Estados envolvidos”, reforça. </p>
+        <p class="text-primary font-weight-bold">Vozes no Maranhão</p>
+        <p>Fiscal sanitário municipal, Walter José Alves foi um dos participantes da formação no município de Pinheiro. Trabalhando há 23 anos na área da Saúde, ele considerou o curso uma oportunidade de despertar para temas importantes que podem ser tratados em rede junto aos usuários do sistema municipal. Uma das questões é a ambiental, em específico a situação do Rio Pericumã, que corta a cidade. “Pinheiro é quase uma ilha, com campos alagados no entorno, que são bonitos, mas apresentam muitos problemas ambientais, agravados pela ação humana. Como fiscal sanitário, sei que isso já deveria ter mudado, mas falta mais vontade política”, salientou.</p>
+
+        <p>Para a maioria dos participantes, o diferencial da formação está no aprendizado que pode ser replicado no trabalho diário. A agente comunitária de Saúde (ACS) Lourdes Maria Pereira conta que o contato próximo com a comunidade permite que ela possa orientar também os comunitários acerca da importância do cumprimento de políticas públicas. “O curso chegou em um momento difícil da minha vida pessoal, mas aqui encontrei conhecimento, que eu posso levar para minha comunidade”, relata. Segundo ela, a capacitação ajuda a otimizar o relacionamento com os usuários que buscam sempre uma saúde de qualidade. </p>
+        <p>Uma das metodologias trabalhadas no curso é a da Cartografia, que permite representar espacialmente elementos de um território, contribuindo para sua interpretação. “Aprendi muito com a cartografia do território, onde pude conhecer locais e serviços que nem imaginava que existissem. Pude conhecer as crenças da comunidade, temas sobre os quais ouvia falar, mas não tinha oportunidade de sentar com as pessoas para conversar”, observou Lourdes Maria, que trabalha há 23 anos como ACS no município de Miranda do Norte, a 147 quilômetros de Pinheiro.</p>
+        <p>Outro participante do curso, o ACS José de Ribamar Soares Braga, que trabalha no Povoado Quilombola de Vitória dos Bragas, em Pinheiro, conta que ficou motivado a participar do curso por valorizar a vivência e os conhecimentos dos trabalhadores da saúde que atuam no campo, floresta e águas. “Minha comunidade compreende quilombolas e ribeirinhos. Vim para buscar mais saberes acerca desses povos, para aprender a trabalhar, encontrar metodologias que possa aplicar e termos dias e condições melhores para nosso povo”, comentou ele, que tem descendência quilombola.</p>
+        <p>Para a enfermeira Flávia Galvão, a experiência proporcionada pelo projeto Começo Meio Começo trouxe um olhar diferenciado sobre a saúde das populações do campo, floresta e águas. “O curso ampliou nossa visão sobre o cuidado e saúde nesses territórios. Cada módulo foi uma oportunidade de aprimorar meu trabalho e enxergar novas formas de atuação na atenção à saúde, compreendendo a realidade dessas populações, fortalecer o meu compromisso como o atendimento humanizado e de eficiência”, explicou. Segundo ela, a metodologia da cartografia social foi uma experiência transformadora. “Mapear os territórios com os próprios moradores nos permite entender as necessidades reais, respeitando a cultura e seus modos de vida, essencial para o cuidado em saúde, mais efetivo e participativo”, assegurou Flávia. </p>
+        <p>O encontro proporcionou também a troca de experiência entre os profissionais. “Compartilhar vivências e fortalecer essa rede de aprendizado faz toda a diferença. Sem dúvida, uma experiência enriquecedora que levo para minha prática profissional. Sou muito grata por essa oportunidade e recomendo essa experiência para todos que desejam um olhar mais amplo e humano sobre o cuidado em saúde”, destaca a enfermeira.</p>
+        <p class="text-primary font-weight-bold">Trilhas formativas</p>
+        <p>A comunicóloga Denise Rodrigues Amorim de Araújo, que atuou no projeto Começo Meio Começo como facilitadora no Estado do Maranhão, observa que todas as impressões dos participantes convergem para o objetivo principal da formação, que é fortalecer a Política Nacional de Saúde Integral das Populações do Campo, Floresta e Águas. “O trabalho tem se revelado uma grande oportunidade de trazer reflexões e saberes aos trabalhadores e trabalhadoras que atuam no cuidado dessas populações. As trilhas formativas, para além da possibilidade de esclarecer conceitos, provoca movimentos de integração e participação dos trabalhadores e equipes, permite imersões nos territórios e redes vivas das comunidades que culminam em produções incríveis sobre os saberes e práticas locais, conectando ainda mais os trabalhadores e os serviços de saúde com os usuários e dinâmicas do lugar”, avalia. </p>
+        <p>Denise destaca ainda a importância do caráter participativo da formação. “A facilitação é a costura de um tecido que alinhava, por meio do diálogo e reflexões críticas, trabalhadores e trabalhadoras, equipes de saúde, movimentos sociais, usuários, gestores, em uma produção de conhecimento que se apresenta como produções cartográficas, de uma profundidade e beleza capazes de mobilizar transformações importantes para o cuidado em saúde”, analisa. A facilitadora coordenou três encontros em Pinheiro e deverá realizar mais duas formações, sendo que o último encontro acontecerá no encontro acontecerá no município de Pinheiro (MA). “Saímos todos, facilitadores, apoiadores, articuladores, coordenadores e trabalhadores, fortalecidos e motivados a seguir construindo aprendizados que serão disparadores para o fortalecimento do cuidado em saúde dessas populações”, resume. </p>
+        <p class="text-primary font-weight-bold">Puxirum</p>
+        <p>Aluna do curso, Taiza de Jesus Sarges Garcias afirma que a construção do mapa social do território foi uma experiência com resultados satisfatórios. “Nos divertimos, aprendemos e nos aprimoramos, tanto pessoalmente como profissionalmente. Uma experiência ímpar, proporcionada pelo curso Começo Meio Começo. Por ser algo corriqueiro e comum para nós, às vezes não nos damos conta da magnitude e riqueza que possuímos”, disse ela, exemplificando a importância de conhecer personagens interessantes dentro do trabalho do puxirum (mutirão) da trilha 1. Alguns nos deram a honra de participar no dia do puxirum conosco e outros, por conta da logística, fomos ao encontro nas suas respectivas moradias, coletar os seus relatos, diz ela, citando personagens como o agricultor Celso Nunes, morador do Povoado Pampilhosa, exemplo de superação após ter sofrido um AVC. </p>
+        <p>“Ainda no Povoado de Pampilhosa, visitamos o engenho de cana de açúcar, que ainda guarda resquícios da colonização portuguesa, onde o presidente da comunidade Júlio Moreira nos explicou o passo a passo para a fabricação da cachaça de cana de açúcar, muito apreciada e conhecida na região”, relata Taiza. No Povoado Maranhão Novo, ela conta que tiveram contato com o curandeiro Justino dos Santos e a parteira Maria do Socorro, que nos contaram relatos acerca dos seus ofícios.</p>
+        <p>No povoado Vitória dos Braga, foram coletados relatos de moradores que atuam na atividade de pesca artesanal e extração do coco babaçu. “Um povo batalhador que traz consigo as marcas de uma vida simples e difícil, mas que também carregam o orgulho do seu passado e da sua cultura e isso transparece em cada palavra”, frisou a participante.</p>
+      </section>
+    </main>
+    <!-- MAIN CONTENT END -->
+
+    <!-- FOOTER START -->
+     <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+          try {
+              const response = await fetch('footer.html');
+              if (!response.ok) throw new Error("Failed to load footer.html");
+      
+              const html = await response.text();
+              const temp = document.createElement('div');
+              temp.innerHTML = html;
+      
+              const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
+              scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+          } catch (error) {
+              console.error(error);
+          }
+      });
+    </script>
+    <!-- FOOTER END -->
+  </body>
+
+  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+  <script src="assets/js/purpose.core.js"></script>
+  <!-- Page JS -->
+  <script src="assets/libs/swiper/dist/js/swiper.min.js"></script>
+  <!-- Purpose JS -->
+  <script src="assets/js/purpose.js"></script>
+</html>
