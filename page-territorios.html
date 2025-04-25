@@ -33,6 +33,72 @@
     
     <link href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <style>
+        /* CSS dos cards e mapa */
+.am5-tooltip-container {
+  background: transparent !important;
+  border: none !important;
+  padding: 0px !important;
+  box-shadow: none !important;
+}
+
+.tooltip-card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  max-width: 400px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  font-family: sans-serif;
+  color: #333;
+  font-size: 13px;
+  overflow: hidden;
+  max-height: 600px;
+  margin: 20px;
+}
+
+.tooltip-card::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.pulse-wrapper {
+  position: relative;
+}
+
+.pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(255, 193, 7, 0.6);
+  border-radius: 50%;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+
+
       /* HEADER TITLE START */
       .page-header-container {
         background-color: #E5EEFF;
@@ -143,122 +209,240 @@
       });
     </script>
     <!-- FOOTER END -->
+    <style>
+      .pulse-wrapper {
+        position: relative;
+      }
+    
+      .pulse-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -50%);
+        border: 2px solid rgba(255, 193, 7, 0.6);
+        border-radius: 50%;
+        animation: pulse-ring 2s ease-out infinite;
+      }
+    
+      @keyframes pulse-ring {
+        0% {
+          transform: translate(-50%, -50%) scale(0.8);
+          opacity: 1;
+        }
+        70% {
+          transform: translate(-50%, -50%) scale(1.6);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(0.8);
+          opacity: 0;
+        }
+      }
+    </style>
+    
     <script>
-      am5.ready(function () {
-        var root = am5.Root.new("chartdiv");
-        root.setThemes([am5themes_Animated.new(root)]);
-    
-        var chart = root.container.children.push(
-          am5map.MapChart.new(root, {
-            panX: "none",
-            panY: "none",
-            wheelX: "none",
-            wheelY: "none",
-            pinchZoom: false,
-            projection: am5map.geoMercator()
-          })
-        );
-    
-        var brazilSeries = chart.series.push(
-          am5map.MapPolygonSeries.new(root, {
-            geoJSON: am5geodata_brazilLow
-          })
-        );
-    
-        // Dados de exemplo
-        var statesData = {
-          "BR-MA": { 
-            name: "Maranhão",
-            description: 
-              `<strong>CODÓ:</strong> Alcântara, Aldeias Altas; Barreirinhas; 
-              Caxias; Chapadinha; Coroatá, Dom Pedro; 
-              Itapecuru; Santo Antônio dos Lopes; 
-              Parnarama; Pedreiras; e São Luís.<br><br>
-              <strong>MARABÁ:</strong> Açailândia; Buritirana; 
-              Estreito; Imperatriz; Montes Altos; 
-              e São Francisco do Brejão`
-          },
-          "BR-PA": {
-            name: "Pará",
-            description:
-              `<strong>ILHA DE MARAJÓ:</strong> Ilha de Marajó<br><br>
-              <strong>MARABÁ:</strong> Dom Eliseu; Parauapebas; 
-              Rondon do Pará; e Ulianópolis`
-          },
-          "BR-TO": {
-            name: "Tocantins",
-            description:
-              `<strong>MARABÁ:</strong> Araguatins; Praia Norte; 
-              e Sítio Novo do Tocantins`
-          },
-          "BR-PI": {
-            name: "Piauí",
-            description:
-              `<strong>CODÓ:</strong> José de Freitas; Piripiri; 
-              Teresina; e União`
-          },
-          "BR-RN": {
-            name: "Rio Grande do Norte",
-            description:
-              `<strong>MOSSORÓ:</strong> Açu; Apodi; Baraúna; Caraúba; 
-              Governador Dix-Sept; Grossos; Ipanguaçu; Macau; 
-              Natal; Umarizal; e Upanema`
-          },
-          "BR-CE": {
-            name: "Ceará",
-            description:
-              `<strong>MOSSORÓ:</strong> Aracati; Fortim; Icapuí; e Russas`
-          },
-          "BR-PB": {
-            name: "Paraíba",
-            description:
-              `<strong>MOSSORÓ:</strong> Cajazeirinhas; Cajazeiras; 
-              Catolé do Rocha; e Pombal`
-          },
-          "BR-BA": {
-            name: "Bahia",
-            description:
-              `<strong>CACHOEIRA:</strong> Alagoinhas; Cruz das Almas; Feira de Santana; 
-              Itacaré; Maragogipe; São Felix; 
-              Salinas da Margarida; Santo Amaro; 
-              Santo Estêvão; São Sebastião do Passé e Simões Filho`
-          }
-        };
-    
-        brazilSeries.mapPolygons.template.setAll({
-          interactive: true,
-          fill: am5.color(0xaaaaaa),
-          templateField: "polygonSettings"
+am5.ready(function () {
+  const root = am5.Root.new("chartdiv");
+  root.setThemes([am5themes_Animated.new(root)]);
+
+  const chart = root.container.children.push(
+    am5map.MapChart.new(root, {
+      panX: "none",
+      panY: "none",
+      wheelX: "none",
+      wheelY: "none",
+      pinchZoom: false,
+      projection: am5map.geoMercator()
+    })
+  );
+
+  const brazilSeries = chart.series.push(
+    am5map.MapPolygonSeries.new(root, {
+      geoJSON: am5geodata_brazilLow
+    })
+  );
+
+  const statesData = {
+    "BR-PA": { name: "Pará" },
+    "BR-MA": { name: "Maranhão" },
+    "BR-PI": { name: "Piauí" },
+    "BR-RN": { name: "Rio Grande do Norte" },
+    "BR-CE": { name: "Ceará" },
+    "BR-PB": { name: "Paraíba" },
+    "BR-BA": { name: "Bahia" },
+    "BR-TO": { name: "Tocantins" }
+  };
+
+  brazilSeries.mapPolygons.template.setAll({
+    interactive: false,
+    fill: am5.color(0xdddddd),
+    templateField: "polygonSettings"
+  });
+
+  brazilSeries.mapPolygons.each((polygon) => {
+    const id = polygon.dataItem.get("id");
+    if (statesData[id]) {
+      polygon.set("interactive", true);
+      polygon.states.create("hover", {
+        fill: am5.color("#357a3a")
+      });
+    }
+  });
+
+  brazilSeries.mapPolygons.template.states.create("hover", {
+    fill: am5.color("#357a3a")
+  });
+
+  brazilSeries.data.setAll(
+    Object.entries(statesData).map(([id, state]) => ({
+      id,
+      name: state.name,
+      polygonSettings: {
+        fill: am5.color("#469B49")
+      }
+    }))
+  );
+
+  const pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+
+  pointSeries.bullets.push(function () {
+    const wrapper = document.createElement("div");
+    wrapper.className = "pulse-wrapper";
+
+    const ring = document.createElement("div");
+    ring.className = "pulse-ring";
+    wrapper.appendChild(ring);
+
+    const container = am5.Container.new(root, {
+      width: 18,
+      height: 18,
+      centerX: am5.p50,
+      centerY: am5.p50,
+      tooltipY: 0
+    });
+
+    const circle = am5.Circle.new(root, {
+  radius: 6,
+  fill: am5.color("#FFC107"),
+  tooltipHTML: "{tooltipHTML}",
+  cursorOverStyle: "pointer",
+  interactive: true,
+  strokeOpacity: 0,
+  strokeWidth: 2,
+  stroke: am5.color("#FFC107")
+});
+
+// Animate "scale" to create pulse effect
+circle.animate({
+  key: "scale",
+  from: 1,
+  to: 1.6,
+  duration: 3000,
+  loops: Infinity,
+  easing: am5.ease.yoyo(am5.ease.cubic) // 👈 back-and-forth
+});
+
+    // ✅ Verifica se o tooltip já está criado antes de manipular
+    root.events.once("frameended", function () {
+      const tooltip = circle.getTooltip();
+      if (tooltip) {
+        tooltip.get("background").setAll({
+          fillOpacity: 0,
+          strokeOpacity: 0
         });
-    
-        brazilSeries.mapPolygons.template.states.create("hover", {
-          fill: am5.color("#357a3a")
-        });
-    
-        // Injeta dados e define o tooltip
-        brazilSeries.data.setAll(
-          Object.entries(statesData).map(([id, value]) => ({
-            id,
-            name: value.name,
-            tags: value.tags,
-            description: value.description,
-            polygonSettings: {
-              fill: am5.color("#469B49"),
-              tooltipHTML: `
-                <div style="background: white; padding: 10px; border-radius: 5px; max-width: 300px;">
-                  <div style="font-weight: bold; font-size: 16px; color: #333;">${value.name}</div>
-                  <div style="font-size: 13px; color: #444;">${value.description}</div>
-                </div>
-              `,
-              // Ajustando a posição do tooltip para não ficar exatamente no mouse
-              tooltipPosition: "pointer", // Posição relativa ao ponteiro
-              tooltipOffsetX: 10, // Deslocamento horizontal
-              tooltipOffsetY: 10  // Deslocamento vertical
-            }
-          }))
-        );
-      }); // end am5.ready()
+      }
+    });
+
+    container.children.push(circle);
+
+    // ✅ Protege o acesso ao native DOM
+    setTimeout(() => {
+      if (circle._display && circle._display._native) {
+        circle._display._native.appendChild(wrapper);
+      }
+    }, 0);
+
+    return am5.Bullet.new(root, {
+      sprite: container
+    });
+  });
+
+  const pointsData = [
+    {
+      id: "ponto1",
+      coordinates: [-49.5, -1.0],
+      title: "Ilha de Marajó",
+      states: ["PA"],
+      body: ""
+    },
+    {
+      id: "ponto2",
+      coordinates: [-43.5, -4.7],
+      title: "Codó",
+      states: ["MA", "PI"],
+      body: `
+        <strong>MA</strong> Alcântara, Aldeias Altas, Barreirinhas, Caxias, Chapadinha, Coroatá, Dom Pedro, Itapecuru, Santo Antônio dos Lopes, Parnarama, Pedreiras, São Luís<br><br>
+        <strong>PI</strong> José de Freitas, Piripiri, Teresina, União`
+    },
+    {
+      id: "ponto3",
+      coordinates: [-37.34, -5.19],
+      title: "Mossoró",
+      states: ["RN", "CE", "PB"],
+      body: `
+        <strong>RN</strong> Açu, Apodi, Baraúna, Caraúba, Governador Dix-Sept, Grossos, Ipanguaçu, Macau, Natal, Umarizal, Upanema<br><br>
+        <strong>CE</strong> Aracati, Fortim, Icapuí, Russas<br><br>
+        <strong>PB</strong> Cajazeirinhas, Cajazeiras, Catolé do Rocha, Pombal`
+    },
+    {
+      id: "ponto4",
+      coordinates: [-38.96, -12.6],
+      title: "Cachoeira",
+      states: ["BA"],
+      body: `
+        Alagoinhas, Cruz das Almas, Feira de Santana, Itacaré, Maragogipe, São Felix, Salinas da Margarida, Santo Amaro, Santo Estêvão, São Sebastião do Passé, Simões Filho`
+    },
+    {
+      id: "ponto5",
+      coordinates: [-49.12, -5.37],
+      title: "Marabá",
+      states: ["PA", "TO", "MA"],
+      body: `
+        <strong>MA</strong> Açailândia, Buritirana, Estreito, Imperatriz, Montes Altos, São Francisco do Brejão<br><br>
+        <strong>PA</strong> Dom Eliseu, Parauapebas, Rondon do Pará, Ulianópolis<br><br>
+        <strong>TO</strong> Araguatins, Praia Norte, Sítio Novo do Tocantins`
+    }
+  ];
+
+  const tooltipFromPoint = (point) => {
+    const badges = point.states.map(
+      (sigla) => `<span class="badge badge-warning m-1">${sigla}</span>`
+    ).join("");
+    return `
+      <div class="tooltip-card">
+        <div style="font-weight: bold; font-size: 18px; margin-bottom: 6px;">
+          ${point.title} ${badges}
+        </div>
+        <div>${point.body}</div>
+      </div>
+    `;
+  };
+
+  pointSeries.data.setAll(
+    pointsData.map((p) => ({
+      id: p.id,
+      geometry: { type: "Point", coordinates: p.coordinates },
+      tooltipHTML: tooltipFromPoint(p)
+    }))
+  );
+});
+
     </script>
+    
+      
+    
   </body>
   <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
   <script src="assets/js/purpose.core.js"></script>
