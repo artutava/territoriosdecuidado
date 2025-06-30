@@ -881,10 +881,10 @@ $breadcrumb-padding-x:              1rem !default;
 $breadcrumb-margin-bottom:          0 !default;
 
 $breadcrumb-bg:                     transparent !default;
-$breadcrumb-border:                 1px solid $border-color !default;
-$breadcrumb-divider-color:          $gray-400 !default;
-$breadcrumb-active-color:           $gray-600 !default;
-$breadcrumb-divider:                "/" !default;
+$breadcrumb-border:                 none !default;
+$breadcrumb-divider-color:          $gray-800 !default;
+$breadcrumb-active-color:           $gray-800 !default;
+$breadcrumb-divider:                ">" !default;
 
 $breadcrumb-padding-y-sm:           .5rem !default;
 $breadcrumb-padding-x-sm:           .5rem !default;

@@ -17,6 +17,12 @@
   font-weight: 700;
   src: url('/assets/fonts/Gotham Fonts Family/GOTHAM-BOLD.TTF');
 }
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 900;
+  src: url('/assets/fonts/Gotham Fonts Family/GOTHAM-ULTRA.TTF');
+}
+
 * {
   scroll-behavior: smooth;
 }
