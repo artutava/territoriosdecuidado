@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito:300,400,600,700);@charset "UTF-8";
 /*
 
 Theme: Purpose - Website UI Kit
@@ -11,7 +11,6 @@ Author URI: https://www.webpixels.io
 Copyright 2018-2019 Webpixels
 
 */
-@import url(https://fonts.googleapis.com/css?family=Nunito:300,400,600,700);
 :root {
   --blue: #326BD7;
   --indigo: #6e00ff;
@@ -520,7 +519,7 @@ mark,
   color: #C0CCDA;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "\2014\A0";
 }
 
 .img-fluid {
@@ -2991,7 +2990,7 @@ input[type=button].btn-block {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f107";
+  content: "\F107";
 }
 .dropdown-toggle:empty::after {
   margin-left: 0;
@@ -3084,7 +3083,7 @@ input[type=button].btn-block {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f106";
+  content: "\F106";
 }
 .dropup .dropdown-toggle:empty::after {
   margin-left: 0;
@@ -3107,7 +3106,7 @@ input[type=button].btn-block {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f105";
+  content: "\F105";
 }
 .dropright .dropdown-toggle:empty::after {
   margin-left: 0;
@@ -3143,7 +3142,7 @@ input[type=button].btn-block {
   display: inline-block;
   margin-right: 10.2px;
   content: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 256 512' width='12px' height='12px' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%239DAFBD' d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z'/%3E%3C/svg%3E");
-  content: "\f104";
+  content: "\F104";
 }
 .dropleft .dropdown-toggle:empty::after {
   margin-left: 0;
@@ -4520,7 +4519,7 @@ input[type=button].btn-block {
     margin-left: -15px;
   }
   .card-deck .card {
-    flex: 1 0;
+    flex: 1 0 0%;
     margin-right: 15px;
     margin-bottom: 0;
     margin-left: 15px;
@@ -4536,7 +4535,7 @@ input[type=button].btn-block {
     flex-flow: row wrap;
   }
   .card-group > .card {
-    flex: 1 0;
+    flex: 1 0 0%;
     margin-bottom: 0;
   }
   .card-group > .card + .card {
@@ -5103,7 +5102,7 @@ a.badge-white:focus, a.badge-white.focus {
 }
 
 .media-body {
-  flex: 1 1;
+  flex: 1;
 }
 
 .list-group {
@@ -13295,7 +13294,7 @@ a.text-muted:hover {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f105";
+  content: "\F105";
 }
 .alert-modern:empty::after {
   margin-left: 0;
@@ -13907,9 +13906,7 @@ a.text-muted:hover {
   width: 0.3rem;
   height: 0.6rem;
   margin-right: 0.5rem;
-  -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMCAxNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+ICAgICAgICA8ZyBpZD0iY2hldnJvbi1yaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDIuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIuNSI+ICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJTaGFwZSIgcG9pbnRzPSIwIDEyIDYgNiAwIDAiPjwvcG9seWxpbmU+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=) no-repeat 50% 50%;
   mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMCAxNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+ICAgICAgICA8ZyBpZD0iY2hldnJvbi1yaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDIuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIuNSI+ICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJTaGFwZSIgcG9pbnRzPSIwIDEyIDYgNiAwIDAiPjwvcG9seWxpbmU+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=) no-repeat 50% 50%;
-  -webkit-mask-size: contain;
   mask-size: contain;
   background: #3C4858;
 }
@@ -15578,7 +15575,7 @@ a.text-muted:hover {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f105";
+  content: "\F105";
 }
 .dropdown-submenu > .dropdown-item:empty::after,
 .dropdown-submenu > .list-group-item:empty::after {
@@ -16421,7 +16418,7 @@ textarea[resize=horizontal] {
 }
 
 .list-group-content {
-  flex: 1 1;
+  flex: 1;
   min-width: 0;
 }
 .list-group-content p {
@@ -17301,7 +17298,7 @@ textarea[resize=horizontal] {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
-  content: "\f105";
+  content: "\F105";
   margin-left: auto;
   color: #E0E6ED;
   transition: all 0.2s ease;
@@ -17365,7 +17362,7 @@ textarea[resize=horizontal] {
   border-width: 0 0 0 1px;
 }
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
-  flex: 1 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -17455,7 +17452,7 @@ textarea[resize=horizontal] {
     border-width: 0 0 0 1px;
   }
   .navbar-vertical.navbar-expand-sm .navbar-collapse {
-    flex: 1 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -17546,7 +17543,7 @@ textarea[resize=horizontal] {
     border-width: 0 0 0 1px;
   }
   .navbar-vertical.navbar-expand-md .navbar-collapse {
-    flex: 1 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -17637,7 +17634,7 @@ textarea[resize=horizontal] {
     border-width: 0 0 0 1px;
   }
   .navbar-vertical.navbar-expand-lg .navbar-collapse {
-    flex: 1 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -17728,7 +17725,7 @@ textarea[resize=horizontal] {
     border-width: 0 0 0 1px;
   }
   .navbar-vertical.navbar-expand-xl .navbar-collapse {
-    flex: 1 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -18979,7 +18976,7 @@ textarea[resize=horizontal] {
   cursor: pointer;
 }
 .rating .star:before {
-  content: "\f005";
+  content: "\F005";
   display: block;
   font-size: 14px;
   color: #E0E6ED;
@@ -20026,7 +20023,7 @@ a {
 }
 .blockquote .quote:before {
   font-family: Arial;
-  content: "“";
+  content: "\201C";
   color: #326BD7;
   font-size: 4em;
   line-height: 1;
@@ -20049,7 +20046,7 @@ a {
 }
 .blockquote-card:before {
   font-family: Arial;
-  content: "“";
+  content: "\201C";
   color: #326BD7;
   font-size: 4em;
   position: absolute;
@@ -22635,7 +22632,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   opacity: 0;
 }
 .bootstrap-tagsinput [data-role=remove]:after {
-  content: "×";
+  content: "\D7";
   font-size: 16px;
 }
 .bootstrap-tagsinput .badge {

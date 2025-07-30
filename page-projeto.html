@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
-    <meta name="author" content="Webpixels">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams."
+    />
+    <meta name="author" content="Webpixels" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png" />
     <!-- Font Awesome 5 -->
-    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
-    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
-    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link
+      rel="stylesheet"
+      href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    />
     <!-- Additional fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,700"
+      rel="stylesheet"
+    />
     <!-- Purpose CSS -->
-    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet">
+    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet" />
     <!-- Common CSS through the pages-->
-    <link rel="stylesheet" href="global.css" id="stylesheet">
+    <link rel="stylesheet" href="global.css" id="stylesheet" />
 
     <title>Territórios de cuidado</title>
 
     <!-- LILITA ONE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link
+      href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
       .base-section {
         display: flex;
@@ -35,13 +57,13 @@
         gap: 20px;
 
         & > h3 {
-          color: #326BD7;
+          color: #326bd7;
           text-transform: uppercase;
-          font-family: 'Lilita One', sans-serif;
+          font-family: "Lilita One", sans-serif;
         }
 
         & > span {
-          color: #9DAFBD;
+          color: #9dafbd;
           font-size: 18px;
           font-weight: medium;
         }
@@ -52,15 +74,15 @@
         position: relative;
         min-height: 200px;
       }
-      
+
       .green-border {
-        background-color: #E5EEFF;
+        background-color: #e5eeff;
         position: absolute;
         bottom: 0;
         z-index: -1;
         height: 100%;
         width: 100%;
-        border-bottom: 1.25rem solid #469B49;
+        border-bottom: 1.25rem solid #469b49;
       }
 
       .page-header {
@@ -69,7 +91,7 @@
         & > h1 {
           padding: 4rem 0;
           margin: 0;
-          font-family: 'Lilita One', sans-serif;
+          font-family: "Lilita One", sans-serif;
           font-size: 48px;
         }
       }
@@ -82,26 +104,27 @@
         right: 0;
       }
       /* HEADER TITLE END */
-
     </style>
   </head>
 
   <body>
     <!-- HEADER START -->
     <script>
-      (function() {
+      (function () {
         try {
           const xhr = new XMLHttpRequest();
           xhr.open("GET", "header.html", false); // ❗ Make request synchronous (blocking)
           xhr.send();
-          
+
           if (xhr.status !== 200) throw new Error("Failed to load header.html");
-          
-          const temp = document.createElement('div');
+
+          const temp = document.createElement("div");
           temp.innerHTML = xhr.responseText;
-          
-          const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
-          scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+
+          const scriptTag =
+            document.currentScript ||
+            document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement("beforebegin", temp.firstChild);
         } catch (error) {
           console.error(error);
         }
@@ -112,10 +135,14 @@
     <div class="page-header-container">
       <div class="container page-header">
         <h1 class="text-primary">O Projeto</h1>
-        
-        <img src="assets/img/projeto-header-img.svg" class="page-header-img d-none d-md-block" alt="">
+
+        <img
+          src="assets/img/projeto-header-img.svg"
+          class="page-header-img d-none d-md-block"
+          alt=""
+        />
       </div>
-      
+
       <div class="green-border"></div>
     </div>
     <!-- HEADER TITLE END -->
@@ -128,12 +155,25 @@
             <div class="container">
               <div class="row row-grid">
                 <div class="col-lg-6 pt-3 pt-lg-6">
-                  <img src="assets/img/brand/logo-short.svg" alt="Logo">
+                  <img src="assets/img/brand/logo-short.svg" alt="Logo" />
                 </div>
                 <div class="col-lg-6">
-                  <p class="text-white" style="font-family: 'Gotham', sans-serif;">O projeto Territórios Saudáveis e Sustentáveis na Promoção do Cuidado, ou simplesmente Territórios de Cuidado, é uma parceria entre a Fiocruz e o Ministério da Saúde. <br /><br />
-                    Nosso objetivo é desvelar as diversas ações de promoção da saúde que se caracterizam a partir da cultura e do modo de vida nos territórios. Promovendo formação-ação com uma abordagem intersetorial e interseccional para ampliar o debate e promoção da saúde, meio ambiente, cultura e participação social, sempre valorizando os saberes locais e o protagonismo das pessoas.
-                    </p>
+                  <p
+                    class="text-white"
+                    style="font-family: 'Gotham', sans-serif"
+                  >
+                    O projeto Territórios Saudáveis e Sustentáveis na Promoção
+                    do Cuidado, ou simplesmente Territórios de Cuidado, é uma
+                    parceria entre a Fiocruz e o Ministério da Saúde.
+                    <br /><br />
+                    Nosso objetivo é desvelar as diversas ações de promoção da
+                    saúde que se caracterizam a partir da cultura e do modo de
+                    vida nos territórios. Promovendo formação-ação com uma
+                    abordagem intersetorial e interseccional para ampliar o
+                    debate e promoção da saúde, meio ambiente, cultura e
+                    participação social, sempre valorizando os saberes locais e
+                    o protagonismo das pessoas.
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,8 +181,6 @@
         </div>
       </section>
     </div>
-
-   
 
     <!-- MAIN CONTENT START -->
     <main>
@@ -153,7 +191,13 @@
             <div class="card hover-shadow-lg hover-translate-y-n10 h-100">
               <div class="px-5 py-5">
                 <h5 class="text-primary">Formação-ação</h5>
-                <p class=" mt-2 mb-0">Realizamos processos de formação voltados para os movimentos sociais por meio de uma abordagem intersetorial e interseccional que prioriza estratégias participativas e educativas para desenvolver ações locais de promoção da saúde, valorizando assim os saberes populares.</p>
+                <p class="mt-2 mb-0">
+                  Realizamos processos de formação voltados para os movimentos
+                  sociais por meio de uma abordagem intersetorial e
+                  interseccional que prioriza estratégias participativas e
+                  educativas para desenvolver ações locais de promoção da saúde,
+                  valorizando assim os saberes populares.
+                </p>
               </div>
             </div>
           </div>
@@ -161,7 +205,14 @@
             <div class="card hover-shadow-lg hover-translate-y-n10 h-100">
               <div class="px-5 py-5">
                 <h5 class="text-primary">Comunicação social</h5>
-                <p class=" mt-2 mb-0">Promovemos o debate da comunicação e informação sobre a perspectiva de promoção da saúde nos territórios, incentivando a produção de conteúdos a partir das iniciativas locais. Além de produzirmos conteúdos pedagógicos e informativos que ajudam a divulgar essas boas práticas e ampliar o debate sobre saúde, cuidado e equidade.</p>
+                <p class="mt-2 mb-0">
+                  Promovemos o debate da comunicação e informação sobre a
+                  perspectiva de promoção da saúde nos territórios, incentivando
+                  a produção de conteúdos a partir das iniciativas locais. Além
+                  de produzirmos conteúdos pedagógicos e informativos que ajudam
+                  a divulgar essas boas práticas e ampliar o debate sobre saúde,
+                  cuidado e equidade.
+                </p>
               </div>
             </div>
           </div>
@@ -169,7 +220,12 @@
             <div class="card hover-shadow-lg hover-translate-y-n10 h-100">
               <div class="px-5 py-5">
                 <h5 class="text-primary">Rede sociotécnica</h5>
-                <p class=" mt-2 mb-0">Estamos construindo uma plataforma virtual colaborativa que vai conectar pessoas, territórios e saberes. Nela será possível acessar dados, compartilhar experiências e encontrar ferramentas úteis para mobilização e promoção da saúde.</p>
+                <p class="mt-2 mb-0">
+                  Estamos construindo uma plataforma virtual colaborativa que
+                  vai conectar pessoas, territórios e saberes. Nela será
+                  possível acessar dados, compartilhar experiências e encontrar
+                  ferramentas úteis para mobilização e promoção da saúde.
+                </p>
               </div>
             </div>
           </div>
@@ -179,21 +235,48 @@
       <section>
         <div class="container pb-4">
           <div class="mb-5 text-center">
-            <h3 class="mt-4 text-primary" style="font-family: 'Lilita One', sans-serif;">Como atuamos</h3>
+            <h3
+              class="mt-4 text-primary"
+              style="font-family: 'Lilita One', sans-serif"
+            >
+              Como atuamos
+            </h3>
             <div class="fluid-paragraph mt-3">
-              <p class="lead lh-180">Nossas ações envolvem diferentes áreas ao mesmo tempo <br/> — como saúde, educação, assistência social, meio ambiente e cultura.</p>
+              <p class="lead lh-180">
+                Nossas ações envolvem diferentes áreas ao mesmo tempo <br />
+                — como saúde, educação, assistência social, meio ambiente e
+                cultura.
+              </p>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-12">
-              <div class="card bg-primary hover-shadow-lg hover-translate-y-n10 h-100">
+              <div
+                class="card bg-primary hover-shadow-lg hover-translate-y-n10 h-100"
+              >
                 <div class="px-5 py-5">
-                  <h5 class="mb-3 text-white" style="font-family: 'Lilita One', sans-serif;">Nossos objetivos</h5>
+                  <h5
+                    class="mb-3 text-white"
+                    style="font-family: 'Lilita One', sans-serif"
+                  >
+                    Nossos objetivos
+                  </h5>
                   <ul>
-                    <li class="text-white">Promover o cuidado como prática coletiva.</li>
-                    <li class="text-white">Fortalecer a promoção da saúde com equidade e justiça social.</li>
-                    <li class="text-white">Valorizar os saberes populares e as experiências construídas nas comunidades.</li>
-                    <li class="text-white">Ampliar redes de colaboração entre diferentes áreas e grupos sociais.</li>
+                    <li class="text-white">
+                      Promover o cuidado como prática coletiva.
+                    </li>
+                    <li class="text-white">
+                      Fortalecer a promoção da saúde com equidade e justiça
+                      social.
+                    </li>
+                    <li class="text-white">
+                      Valorizar os saberes populares e as experiências
+                      construídas nas comunidades.
+                    </li>
+                    <li class="text-white">
+                      Ampliar redes de colaboração entre diferentes áreas e
+                      grupos sociais.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -201,61 +284,80 @@
           </div>
         </div>
       </section>
-      
+
       <section class="container base-section">
         <h3>Parceiros</h3>
-        <span>Contamos com o apoio de movimentos sociais, universidades, secretarias estaduais e municipais, além de lideranças comunitárias e organizações locais.</span>   
+        <span
+          >Contamos com o apoio de movimentos sociais, universidades,
+          secretarias estaduais e municipais, além de lideranças comunitárias e
+          organizações locais.</span
+        >
         <div class="row">
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body flex">
-                <img src="assets/img/clients/fiocruz.svg" alt="FioCruz">
+                <img src="assets/img/clients/fiocruz.svg" alt="FioCruz" />
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body">
-                <img src="assets/img/clients/brasil-bem-cuidado.svg" alt="Brasil Bem Cuidado">
+                <img
+                  src="assets/img/clients/brasil-bem-cuidado.svg"
+                  alt="Brasil Bem Cuidado"
+                />
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body">
-                <img src="assets/img/clients/sus.svg" alt="SUS">
+                <img src="assets/img/clients/sus.svg" alt="SUS" />
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body">
-                <img src="assets/img/clients/gov.svg" alt="Ministério da Saúde">
+                <img
+                  src="assets/img/clients/gov.svg"
+                  alt="Ministério da Saúde"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </main>
     <!-- MAIN CONTENT END -->
 
     <!-- FOOTER START -->
-     <script>
+    <script>
       document.addEventListener("DOMContentLoaded", async () => {
-          try {
-              const response = await fetch('footer.html');
-              if (!response.ok) throw new Error("Failed to load footer.html");
-      
-              const html = await response.text();
-              const temp = document.createElement('div');
-              temp.innerHTML = html;
-      
-              const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
-              scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
-          } catch (error) {
-              console.error(error);
-          }
+        try {
+          const response = await fetch("footer.html");
+          if (!response.ok) throw new Error("Failed to load footer.html");
+
+          const html = await response.text();
+          const temp = document.createElement("div");
+          temp.innerHTML = html;
+
+          const scriptTag =
+            document.currentScript ||
+            document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement("beforebegin", temp.firstChild);
+        } catch (error) {
+          console.error(error);
+        }
       });
     </script>
     <!-- FOOTER END -->

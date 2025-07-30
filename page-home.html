@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
-    <meta name="author" content="Webpixels">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams."
+    />
+    <meta name="author" content="Webpixels" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png" />
     <!-- Font Awesome 5 -->
-    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
-    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
-    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link
+      rel="stylesheet"
+      href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    />
     <!-- Additional fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,700"
+      rel="stylesheet"
+    />
     <!-- Purpose CSS -->
-    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet">
+    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet" />
     <!-- Common CSS through the pages-->
-    <link rel="stylesheet" href="global.css" id="stylesheet">
+    <link rel="stylesheet" href="global.css" id="stylesheet" />
 
     <title>Territórios de cuidado</title>
 
     <!-- LILITA ONE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link
+      href="/assets/libs/@fortawesome/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
       .base-section {
         display: flex;
@@ -35,13 +57,13 @@
         gap: 20px;
 
         & > h3 {
-          color: #326BD7;
+          color: #326bd7;
           text-transform: uppercase;
-          font-family: 'Lilita One', sans-serif;
+          font-family: "Lilita One", sans-serif;
         }
 
         & > span {
-          color: #9DAFBD;
+          color: #9dafbd;
           font-size: 18px;
           font-weight: medium;
         }
@@ -70,71 +92,118 @@
           color: white;
           text-transform: uppercase;
           text-align: center;
-          font-family: 'Lilita One', sans-serif;
+          font-family: "Lilita One", sans-serif;
         }
-        
+
         button {
           text-transform: uppercase;
         }
       }
-
     </style>
   </head>
 
   <body>
     <!-- HEADER START -->
     <script>
-      (function() {
+      (function () {
         try {
           const xhr = new XMLHttpRequest();
           xhr.open("GET", "header.html", false); // ❗ Make request synchronous (blocking)
           xhr.send();
-          
+
           if (xhr.status !== 200) throw new Error("Failed to load header.html");
-          
-          const temp = document.createElement('div');
+
+          const temp = document.createElement("div");
           temp.innerHTML = xhr.responseText;
-          
-          const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
-          scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+
+          const scriptTag =
+            document.currentScript ||
+            document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement("beforebegin", temp.firstChild);
         } catch (error) {
           console.error(error);
         }
       })();
     </script>
 
-     <!-- Header 1 -->
-     <div class="hero">
-      <section class="header-1 section-rotate bg-section-secondary" data-offset-top="#header-main">
+    <!-- Header 1 -->
+    <div class="hero">
+      <section
+        class="header-1 section-rotate bg-section-secondary"
+        data-offset-top="#header-main"
+      >
         <div class="section-inner bg-primary py-2"></div>
         <!-- SVG illustration 1 -->
-        <div class="pt-7 position-absolute middle right-0 col-lg-7 col-xl-6 d-none d-lg-block">
-          <figure class="w-100" style="max-width: 500px;">
-            <img alt="Image placeholder" src="assets/img/backgrounds/hero.svg" class="svg-inject img-fluid">
+        <div
+          class="pt-7 position-absolute middle right-0 col-lg-7 col-xl-6 d-none d-lg-block"
+        >
+          <figure class="w-100" style="max-width: 500px">
+            <img
+              alt="Image placeholder"
+              src="assets/img/backgrounds/hero.svg"
+              class="svg-inject img-fluid"
+            />
           </figure>
         </div>
         <!-- SVG illustration 2 -->
         <div class="hero-bg">
-          <figure class="w-100" style="max-width: 500px;">
-            <img alt="Image placeholder" src="assets/img/backgrounds/hero-bg.svg" class="svg-inject img-fluid">
+          <figure class="w-100" style="max-width: 500px">
+            <img
+              alt="Image placeholder"
+              src="assets/img/backgrounds/hero-bg.svg"
+              class="svg-inject img-fluid"
+            />
           </figure>
         </div>
         <!-- Hero container -->
-        <div class="container py-5 pt-lg-6 d-flex align-items-center position-relative zindex-100">
+        <div
+          class="container py-5 pt-lg-6 d-flex align-items-center position-relative zindex-100"
+        >
           <div class="col">
             <div class="row">
               <div class="col-lg-5 col-xl-6 text-center text-lg-left">
                 <div>
                   <h2 class="text-white mb-4">
-                    <span class="display-6" style="font-family: Lilita One, sans-serif;">Saúde, Sustentabilidade <br /> e Saberes Locais</span>
+                    <span
+                      class="display-6"
+                      style="font-family: Lilita One, sans-serif"
+                      >Saúde, Sustentabilidade <br />
+                      e Saberes Locais</span
+                    >
                   </h2>
-                  <p class="lead text-white" style="font-family: 'Gotham', sans-serif;">Saiba como o projeto esta promovendo cuidado, <br /> saúde e equidade nos territórios brasileiros</p>
-                  <div class="mt-5" style="display: flex;">
-                    <a href="#sct-page-examples" class="btn btn-white rounded-pill hover-translate-y-n3 btn-icon p-0 scroll-me" style="width: 48px; height: 48px; display: flex; justify-content: center; align-items: center; position: relative;">
-                      <span class="btn-inner--icon" style="position: absolute; transform: translate(2px, 0);"><i class="fa fa-play"></i></span>
+                  <p
+                    class="lead text-white"
+                    style="font-family: 'Gotham', sans-serif"
+                  >
+                    Saiba como o projeto esta promovendo cuidado, <br />
+                    saúde e equidade nos territórios brasileiros
+                  </p>
+                  <div class="mt-5" style="display: flex">
+                    <a
+                      href="#sct-page-examples"
+                      class="btn btn-white rounded-pill hover-translate-y-n3 btn-icon p-0 scroll-me"
+                      style="
+                        width: 48px;
+                        height: 48px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                      "
+                    >
+                      <span
+                        class="btn-inner--icon"
+                        style="position: absolute; transform: translate(2px, 0)"
+                        ><i class="fa fa-play"></i
+                      ></span>
                     </a>
-                    <a href="#sct-features" class="btn btn-outline-white rounded-pill hover-translate-y-n3 btn-icon d-none d-xl-inline-block scroll-me">
-                      <span class="btn-inner--icon"><i class="fas fa-file-alt"></i></span>
+                    <a
+                      href="#sct-features"
+                      class="btn btn-outline-white rounded-pill hover-translate-y-n3 btn-icon d-none d-xl-inline-block scroll-me"
+                    >
+                      <span class="btn-inner--icon"
+                        ><i class="fas fa-file-alt"></i
+                      ></span>
                       <span class="btn-inner--text">Ler mais</span>
                     </a>
                   </div>
@@ -150,26 +219,40 @@
     <!-- MAIN CONTENT START -->
     <main>
       <section class="container bold-cards-section">
-        <div class="bold-card" style="background-color: #026FC2;">
+        <div class="bold-card" style="background-color: #026fc2">
           <span>Inscreva-se na formação</span>
-          <button class="btn btn-white rounded-pill" style="color: #026FC2;">Quero me inscrever</button>
+          <button class="btn btn-white rounded-pill" style="color: #026fc2">
+            Quero me inscrever
+          </button>
         </div>
 
-        <div class="bold-card" style="background-color: #469B49;">
-          <span>Acesse nossos materiais <br /> pedagógicos</span>
-          <button class="btn btn-white rounded-pill" style="color: #469B49;">Ver conteúdos</button>
+        <div class="bold-card" style="background-color: #469b49">
+          <span
+            >Acesse nossos materiais <br />
+            pedagógicos</span
+          >
+          <button class="btn btn-white rounded-pill" style="color: #469b49">
+            Ver conteúdos
+          </button>
         </div>
 
-        <div class="bold-card" style="background-color: #EAB236;">
+        <div class="bold-card" style="background-color: #eab236">
           <span>Conheça os 15 territórios de <br />cuidado</span>
-          <button class="btn btn-white rounded-pill" style="color: #EAB236;">Ver no mapa</button>
+          <button class="btn btn-white rounded-pill" style="color: #eab236">
+            Ver no mapa
+          </button>
         </div>
       </section>
 
       <section class="slice slice-lg">
         <div class="container">
           <div class="mb-4">
-            <h3 class="heading h3 text-primary text-uppercase mb-0" style="font-family: 'Lilita One', sans-serif;">Próximos eventos</h3>
+            <h3
+              class="heading h3 text-primary text-uppercase mb-0"
+              style="font-family: 'Lilita One', sans-serif"
+            >
+              Próximos eventos
+            </h3>
           </div>
           <div class="row row-grid">
             <div class="col-lg-6">
@@ -177,12 +260,24 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-2">
-                      <span class="d-block text-center text-uppercase text-nowrap text-warning">Agosto</span>
-                      <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">03</span>
+                      <span
+                        class="d-block text-center text-uppercase text-nowrap text-warning"
+                        >Agosto</span
+                      >
+                      <span
+                        class="d-block text-center h1 mb-0"
+                        style="font-family: 'Oswald', sans-serif"
+                        >03</span
+                      >
                     </div>
                     <div class="col-md-10 text-center text-md-left">
-                      <h3 class="h5 mb-0 text-primary">Workshop FioCruz Brasília</h3>
-                      <p class="mb-0 leading-none">Avenida L3 Norte, s/n, Campus Universitário Darcy Ribeiro, Gleba A, Brasília</p>
+                      <h3 class="h5 mb-0 text-primary">
+                        Workshop FioCruz Brasília
+                      </h3>
+                      <p class="mb-0 leading-none">
+                        Avenida L3 Norte, s/n, Campus Universitário Darcy
+                        Ribeiro, Gleba A, Brasília
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -191,12 +286,24 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-2">
-                      <span class="d-block text-center text-uppercase text-nowrap text-warning">Agosto</span>
-                      <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">03</span>
+                      <span
+                        class="d-block text-center text-uppercase text-nowrap text-warning"
+                        >Agosto</span
+                      >
+                      <span
+                        class="d-block text-center h1 mb-0"
+                        style="font-family: 'Oswald', sans-serif"
+                        >03</span
+                      >
                     </div>
                     <div class="col-md-10 text-center text-md-left">
-                      <h3 class="h5 mb-0 text-primary">Workshop FioCruz Brasília</h3>
-                      <p class="mb-0 leading-none">Avenida L3 Norte, s/n, Campus Universitário Darcy Ribeiro, Gleba A, Brasília</p>
+                      <h3 class="h5 mb-0 text-primary">
+                        Workshop FioCruz Brasília
+                      </h3>
+                      <p class="mb-0 leading-none">
+                        Avenida L3 Norte, s/n, Campus Universitário Darcy
+                        Ribeiro, Gleba A, Brasília
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -207,12 +314,24 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-2">
-                      <span class="d-block text-center text-uppercase text-nowrap text-warning">Agosto</span>
-                      <span class="d-block text-center h1 mb-0" style="font-family: 'Oswald', sans-serif;">03</span>
+                      <span
+                        class="d-block text-center text-uppercase text-nowrap text-warning"
+                        >Agosto</span
+                      >
+                      <span
+                        class="d-block text-center h1 mb-0"
+                        style="font-family: 'Oswald', sans-serif"
+                        >03</span
+                      >
                     </div>
                     <div class="col-md-10 text-center text-md-left">
-                      <h3 class="h5 mb-0 text-primary">Workshop FioCruz Brasília</h3>
-                      <p class="mb-0 leading-none">Avenida L3 Norte, s/n, Campus Universitário Darcy Ribeiro, Gleba A, Brasília</p>
+                      <h3 class="h5 mb-0 text-primary">
+                        Workshop FioCruz Brasília
+                      </h3>
+                      <p class="mb-0 leading-none">
+                        Avenida L3 Norte, s/n, Campus Universitário Darcy
+                        Ribeiro, Gleba A, Brasília
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -223,42 +342,72 @@
       </section>
 
       <section class="container base-section">
-        <h3>Números do projeto</h3>        
+        <h3>Números do projeto</h3>
         <div class="position-relative">
           <div class="row">
             <div class="col-lg-3 col-6 mb-5 mb-lg-0">
               <div class="text-center">
                 <div class="h1 text-primary">
-                  <span class="counter" data-from="0" data-to="15" data-speed="3000" data-refresh-interval="100"></span>
+                  <span
+                    class="counter"
+                    data-from="0"
+                    data-to="15"
+                    data-speed="3000"
+                    data-refresh-interval="100"
+                  ></span>
                 </div>
-                <h3 class="h6 text-capitalize">Territórios  de Cuidado em todas as regiões do Brasil</h3>
+                <h3 class="h6 text-capitalize">
+                  Territórios de Cuidado em todas as regiões do Brasil
+                </h3>
               </div>
             </div>
             <div class="col-lg-3 col-6 mb-5 mb-lg-0">
               <div class="text-center">
                 <div class="h1 text-primary">
                   <span class="counter-extra">+</span>
-                  <span class="counter" data-from="0" data-to="9" data-speed="3000" data-refresh-interval="100"></span>
+                  <span
+                    class="counter"
+                    data-from="0"
+                    data-to="9"
+                    data-speed="3000"
+                    data-refresh-interval="100"
+                  ></span>
                   <span class="counter-extra">mil</span>
                 </div>
-                <h3 class="h6 text-capitalize">Pessoas mobilizadas diretamente</h3>
+                <h3 class="h6 text-capitalize">
+                  Pessoas mobilizadas diretamente
+                </h3>
               </div>
             </div>
             <div class="col-lg-3 col-6">
               <div class="text-center">
                 <div class="h1 text-primary">
                   <span class="counter-extra">+</span>
-                  <span class="counter" data-from="0" data-to="100" data-speed="3000" data-refresh-interval="100"></span>
+                  <span
+                    class="counter"
+                    data-from="0"
+                    data-to="100"
+                    data-speed="3000"
+                    data-refresh-interval="100"
+                  ></span>
                   <span class="counter-extra">mil</span>
                 </div>
-                <h3 class="h6 text-capitalize">Alcançadas mobilizadas diretamente</h3>
+                <h3 class="h6 text-capitalize">
+                  Alcançadas mobilizadas diretamente
+                </h3>
               </div>
             </div>
             <div class="col-lg-3 col-6">
               <div class="text-center">
                 <div class="h1 text-primary">
                   <span class="counter-extra">+</span>
-                  <span class="counter" data-from="0" data-to="3" data-speed="3000" data-refresh-interval="100"></span>
+                  <span
+                    class="counter"
+                    data-from="0"
+                    data-to="3"
+                    data-speed="3000"
+                    data-refresh-interval="100"
+                  ></span>
                 </div>
                 <h3 class="h6 text-capitalize">Ciclos de formação previstos</h3>
               </div>
@@ -269,58 +418,77 @@
 
       <section class="container base-section">
         <h3>Parceiros</h3>
-        <span>Contamos com o apoio de movimentos sociais, universidades, secretarias estaduais e municipais, além de lideranças comunitárias e organizações locais.</span>   
+        <span
+          >Contamos com o apoio de movimentos sociais, universidades,
+          secretarias estaduais e municipais, além de lideranças comunitárias e
+          organizações locais.</span
+        >
         <div class="row">
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body flex">
-                <img src="assets/img/clients/fiocruz.svg" alt="FioCruz">
+                <img src="assets/img/clients/fiocruz.svg" alt="FioCruz" />
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body">
-                <img src="assets/img/clients/brasil-bem-cuidado.svg" alt="Brasil Bem Cuidado">
+                <img
+                  src="assets/img/clients/brasil-bem-cuidado.svg"
+                  alt="Brasil Bem Cuidado"
+                />
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body">
-                <img src="assets/img/clients/sus.svg" alt="SUS">
+                <img src="assets/img/clients/sus.svg" alt="SUS" />
               </div>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg">
+            <div
+              class="card border text-center py-4 hover-translate-y-n10 hover-shadow-lg"
+            >
               <div class="card-body">
-                <img src="assets/img/clients/gov.svg" alt="Ministério da Saúde">
+                <img
+                  src="assets/img/clients/gov.svg"
+                  alt="Ministério da Saúde"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-
     </main>
     <!-- MAIN CONTENT END -->
 
     <!-- FOOTER START -->
-     <script>
+    <script>
       document.addEventListener("DOMContentLoaded", async () => {
-          try {
-              const response = await fetch('footer.html');
-              if (!response.ok) throw new Error("Failed to load footer.html");
-      
-              const html = await response.text();
-              const temp = document.createElement('div');
-              temp.innerHTML = html;
-      
-              const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
-              scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
-          } catch (error) {
-              console.error(error);
-          }
+        try {
+          const response = await fetch("footer.html");
+          if (!response.ok) throw new Error("Failed to load footer.html");
+
+          const html = await response.text();
+          const temp = document.createElement("div");
+          temp.innerHTML = html;
+
+          const scriptTag =
+            document.currentScript ||
+            document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement("beforebegin", temp.firstChild);
+        } catch (error) {
+          console.error(error);
+        }
       });
     </script>
     <!-- FOOTER END -->

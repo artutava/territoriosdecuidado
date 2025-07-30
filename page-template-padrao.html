@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
-    <meta name="author" content="Webpixels">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams."
+    />
+    <meta name="author" content="Webpixels" />
     <!-- Favicon -->
-    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
+    <link rel="icon" href="assets/img/brand/favicon.png" type="image/png" />
     <!-- Font Awesome 5 -->
-    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"><!-- Page CSS -->
-    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
-    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+    <link
+      rel="stylesheet"
+      href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/dist/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+    />
     <!-- Additional fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,700"
+      rel="stylesheet"
+    />
     <!-- Purpose CSS -->
-    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet">
+    <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet" />
     <!-- Common CSS through the pages-->
-    <link rel="stylesheet" href="global.css" id="stylesheet">
+    <link rel="stylesheet" href="global.css" id="stylesheet" />
 
     <title>Territórios de cuidado</title>
   </head>
@@ -25,19 +41,21 @@
   <body>
     <!-- HEADER START -->
     <script>
-      (function() {
+      (function () {
         try {
           const xhr = new XMLHttpRequest();
           xhr.open("GET", "header.html", false); // ❗ Make request synchronous (blocking)
           xhr.send();
-          
+
           if (xhr.status !== 200) throw new Error("Failed to load header.html");
-          
-          const temp = document.createElement('div');
+
+          const temp = document.createElement("div");
           temp.innerHTML = xhr.responseText;
-          
-          const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
-          scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
+
+          const scriptTag =
+            document.currentScript ||
+            document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement("beforebegin", temp.firstChild);
         } catch (error) {
           console.error(error);
         }
@@ -46,26 +64,27 @@
     <!-- HEADER END -->
 
     <!-- MAIN CONTENT START -->
-    <main>
-    </main>
+    <main></main>
     <!-- MAIN CONTENT END -->
 
     <!-- FOOTER START -->
-     <script>
+    <script>
       document.addEventListener("DOMContentLoaded", async () => {
-          try {
-              const response = await fetch('footer.html');
-              if (!response.ok) throw new Error("Failed to load footer.html");
-      
-              const html = await response.text();
-              const temp = document.createElement('div');
-              temp.innerHTML = html;
-      
-              const scriptTag = document.currentScript || document.scripts[document.scripts.length - 1];
-              scriptTag.insertAdjacentElement('beforebegin', temp.firstChild);
-          } catch (error) {
-              console.error(error);
-          }
+        try {
+          const response = await fetch("footer.html");
+          if (!response.ok) throw new Error("Failed to load footer.html");
+
+          const html = await response.text();
+          const temp = document.createElement("div");
+          temp.innerHTML = html;
+
+          const scriptTag =
+            document.currentScript ||
+            document.scripts[document.scripts.length - 1];
+          scriptTag.insertAdjacentElement("beforebegin", temp.firstChild);
+        } catch (error) {
+          console.error(error);
+        }
       });
     </script>
     <!-- FOOTER END -->
