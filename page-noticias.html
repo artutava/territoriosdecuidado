@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
     <!-- Additional fonts -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
-    <!-- Common CSS through the pages-->
-    <link rel="stylesheet" href="global.css" id="stylesheet">
     <!-- Purpose CSS -->
     <link rel="stylesheet" href="assets/css/purpose.css" id="stylesheet">
+    <!-- Common CSS through the pages-->
+    <link rel="stylesheet" href="global.css" id="stylesheet">
     <title>Territórios de cuidado</title>
 
     <!-- LILITA ONE FONT -->
@@ -53,7 +53,7 @@
           min-height: 0;
 
           & > img {
-            max-width: 80px;
+            width: 170px;
             height: 100%;
             object-fit: contain;
           }
@@ -61,35 +61,149 @@
       }
       /* HEADER TITLE END */
 
-      /* MAIN START */
-      .news-content {
+      .gap-4 {
+        gap: 16px;
+      }
+
+      .news-card {
         display: flex;
-        flex-direction: column;
-        gap: 8px;
+        background-color: var(--cor-fundo-card);
+        box-shadow: var(--sombra-card);
+        margin: 0 auto; 
+        gap: 1.5rem;
       }
-      .news-date {
-        font-family: 'Gotham';
-        font-size: 12px;
-        font-weight: 700;
-        color: #6D8394;
+
+      .news-card__image-container {
+        flex-shrink: 0;
+        width: 300px;
+        background-color: #f1f3f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 0.2s ease;
       }
-      .news-title {
-        font-family: 'Gotham';
-        font-size: 28px;
-        font-weight: 500;
-        color: #4D99E2;
+
+      .news-card__image-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
       }
-      .news-description {
-        font-family: 'Gotham';
-        font-size: 14px;
-        font-weight: 400;
-        color: #6D8394;
-        letter-spacing: 0.01rem;
+      
+      .news-card__content {
+          padding: 0 1.5rem;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
       }
-      .news-bg-mask {
-        background-color: #EEF2F4;
+
+      .news-card__meta-top {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 0.75rem;
       }
-      /* MAIN END */
+
+      .news-card__category {
+          background-color: #D1DBE3;
+          color: white;
+          font-size: 0.875rem;
+          font-weight: 500;
+          padding: 0.25rem 0.75rem;
+          border-radius: 99999px;
+      }
+
+      .news-card__date {
+          font-size: 0.875rem;
+          color: var(--cor-texto-secundario);
+      }
+
+      .news-card__title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #026FC2;
+          text-decoration: none;
+          line-height: 1.3;
+      }
+
+      .news-card__excerpt {
+          color: var(--cor-texto-secundario);
+          line-height: 1.6;
+          margin-top: 0.75rem;
+          flex-grow: 1; /* Empurra o rodapé para baixo */
+      }
+
+      .news-card__footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1.5rem;
+      }
+      
+      .news-card__author {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+      }
+
+      .news-card__author-avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          background-color: #e0e0e0;
+      }
+      
+      .news-card__author-info {
+          display: flex;
+          flex-direction: column;
+      }
+
+      .news-card__author-name {
+          font-weight: 600;
+          font-size: 0.9rem;
+          color: var(--cor-texto-principal);
+      }
+
+      .news-card__author-role {
+          font-size: 0.8rem;
+          color: var(--cor-texto-secundario);
+      }
+
+      .news-card__button {
+          background-color: #026FC2;
+          color: white;
+          text-decoration: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 24px;
+          font-weight: 600;
+          font-size: 0.9rem;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+      }
+
+      .news-card__button:hover {
+          filter: brightness(0.9);
+          color: white;
+          transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+          .news-card {
+              flex-direction: column;
+              gap: 0;
+          }
+
+          .news-card__image-container {
+              width: 100%;
+              height: 200px;
+          }
+
+          .news-card__content {
+              padding: 1.5rem;
+          }
+      }
 
 
     </style>
@@ -131,8 +245,6 @@
     </div>
     <!-- HEADER TITLE END -->
 
-
-
     <div class="bg-primary">
       <div class="container py-4">
         <p class="text-white m-0 text-justify text-gotham">Notícias que conectam e informam: acompanhe os destaques, iniciativas e acontecimentos que marcam o nosso caminho coletivo.</p>
@@ -142,65 +254,139 @@
     <!-- MAIN CONTENT START -->
     <main>
       <section class="container py-8 overflow-hidden">
-        <div class="card text-white overflow-hidden shadow border-0">
-          <div class="card-img-bg" style="background-image: url('../..//assets/img/theme/light/city-1.jpg');"></div>
-          <span class="mask news-bg-mask opacity-9 hover-opacity-6"></span>
-          <div class="card-body news-content px-5 py-5" style="min-height: 250px;">
-              <h5 class="news-date">Publicado em 24/04/2025 11:49</h5>
-              <h4 class="news-title">Projeto promove olhar para a saúde no campo, floresta e águas no Maranhão</h4>
-              <h5 class="news-description">Com a finalidade de promover a formação de trabalhadores que lidam com o cuidado em saúde de populações nesses territórios, projeto 'Começo Meio e Começo' vem atuando em 33 polos educacionais em oito estados brasileiros</h5>
-              <div class="align-self-end">
-                <a href="page-noticias-detalhe.html" class="btn rounded-pill btn-primary">
-                  Ler notícia
-                </a>
-              </div>
-          </div>
-        </div>
+        <article class="news-card mb-5">
+            <div class="news-card__image-container">
+                <img src="assets/img/noticia-single.jpg" alt="Descrição da imagem da notícia">
+            </div>
 
-        <div class="card text-white overflow-hidden shadow border-0">
-          <div class="card-img-bg" style="background-image: url('../..//assets/img/theme/light/city-1.jpg');"></div>
-          <span class="mask news-bg-mask opacity-9 hover-opacity-6"></span>
-          <div class="card-body news-content px-5 py-5" style="min-height: 250px;">
-              <h5 class="news-date">Publicado em 24/04/2025 15:42</h5>
-              <h4 class="news-title">Projeto valoriza importância da alimentação para comunidades de matriz africana</h4>
-              <h5 class="news-description">O objetivo da iniciativa, lançada pela Fiocruz, é valorizar o conhecimento ancestral, a cultura e a importância da alimentação para a saúde e o bem-estar das comunidades religiosas de matriz africana</h5>
-              <div class="align-self-end">
-                <a href="page-noticias-detalhe.html" class="btn rounded-pill btn-primary">
-                  Ler notícia
-                </a>
-              </div>
-          </div>
-        </div>
+            <div class="news-card__content">
+                <div class="news-card__meta-top">
+                    <span class="news-card__category">Eventos</span>
+                    <span class="news-card__date">Publicado em 24/04/2025 11:49</span>
+                </div>
 
-        <div class="card text-white overflow-hidden shadow border-0">
-          <div class="card-img-bg" style="background-image: url('../..//assets/img/theme/light/city-1.jpg');"></div>
-          <span class="mask news-bg-mask opacity-9 hover-opacity-6"></span>
-          <div class="card-body news-content px-5 py-5" style="min-height: 250px;">
-              <h5 class="news-date">Publicado em 24/04/2025 15:39</h5>
-              <h4 class="news-title">Curso forma promotores populares de saúde antirracista em cinco favelas do Rio</h4>
-              <h5 class="news-description">A Fiocruz e o Movimento Negro Unificado (MNU-RJ) promovem o 1° Ciclo de Formação de Promotores Populares de Saúde Antirracista. O curso é gratuito e voltado para moradores dos territórios, representantes de instituições, coletivos locais e ONGs</h5>
-              <div class="align-self-end">
-                <a href="page-noticias-detalhe.html" class="btn rounded-pill btn-primary">
-                  Ler notícia
-                </a>
-              </div>
-          </div>
-        </div>
+                <h2 class="news-card__title">
+                    Projeto promove olhar para a saúde no campo, floresta e águas no Maranhão
+                </h2>
 
-        <div class="card text-white overflow-hidden shadow border-0">
-          <div class="card-img-bg" style="background-image: url('../..//assets/img/theme/light/city-1.jpg');"></div>
-          <span class="mask news-bg-mask opacity-9 hover-opacity-6"></span>
-          <div class="card-body news-content px-5 py-5" style="min-height: 250px;">
-              <h5 class="news-date">Publicado em 17/04/2025 16:17</h5>
-              <h4 class="news-title">Projeto seleciona municípios para elaborar manual de intervenções urbanas para redução de riscos e desastres</h4>
-              <h5 class="news-description">Fiocruz e Ministério das Cidades convidam 50 municípios aptos para participar de seleção que prevê a validação de metodologias integradas e inovadoras. Objetivo é fortalecer as estratégias nacionais de planejamento para resiliência urbana</h5>
-              <div class="align-self-end">
-                <a href="page-noticias-detalhe.html" class="btn rounded-pill btn-primary">
-                  Ler notícia
-                </a>
-              </div>
-          </div>
-        </div>
+                <p class="news-card__excerpt">
+                    Com a finalidade de promover a formação de trabalhadores que lidam com o cuidado em saúde de populações nesses territórios, projeto 'Começo Meio e Começo' vem atuando em 33 polos educacionais em oito estados brasileiros
+                </p>
+
+                <div class="news-card__footer">
+                    <div class="news-card__author">
+                        <img class="news-card__author-avatar" src="assets/img/noticia-single.jpg" alt="Avatar de Emily Jørgensen">
+                        <div class="news-card__author-info">
+                            <span class="news-card__author-name">Júlio Pedrosa</span>
+                            <span class="news-card__author-role">Fiocruz Amazônia</span>
+                        </div>
+                    </div>
+                    <a href="page-noticias-detalhe.html" class="news-card__button">Ler Notícia</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="news-card mb-5">
+            <div class="news-card__image-container">
+                <img src="assets/img/theme/light/city-1.jpg" alt="Projeto valoriza importância da alimentação para comunidades de matriz africana">
+            </div>
+
+            <div class="news-card__content">
+                <div class="news-card__meta-top">
+                    <span class="news-card__category">Notícias</span>
+                    <span class="news-card__date">Publicado em 24/04/2025 15:42</span>
+                </div>
+
+                <h2 class="news-card__title">
+                    <a href="page-noticias-detalhe.html" style="text-decoration: none; color: inherit;">
+                        Projeto valoriza importância da alimentação para comunidades de matriz africana
+                    </a>
+                </h2>
+
+                <p class="news-card__excerpt">
+                    O objetivo da iniciativa, lançada pela Fiocruz, é valorizar o conhecimento ancestral, a cultura e a importância da alimentação para a saúde e o bem-estar das comunidades religiosas de matriz africana
+                </p>
+
+                <div class="news-card__footer">
+                    <div class="news-card__author">
+                        <img class="news-card__author-avatar" src="https://via.placeholder.com/40" alt="Avatar do Autor">
+                        <div class="news-card__author-info">
+                            <span class="news-card__author-name">Nome do Autor</span>
+                            <span class="news-card__author-role">Instituição</span>
+                        </div>
+                    </div>
+                    <a href="page-noticias-detalhe.html" class="news-card__button">Ler Notícia</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="news-card mb-5">
+            <div class="news-card__image-container">
+                <img src="assets/img/theme/light/city-1.jpg" alt="Curso forma promotores populares de saúde antirracista em cinco favelas do Rio">
+            </div>
+
+            <div class="news-card__content">
+                <div class="news-card__meta-top">
+                    <span class="news-card__category">Notícias</span>
+                    <span class="news-card__date">Publicado em 24/04/2025 15:39</span>
+                </div>
+
+                <h2 class="news-card__title">
+                    <a href="page-noticias-detalhe.html" style="text-decoration: none; color: inherit;">
+                        Curso forma promotores populares de saúde antirracista em cinco favelas do Rio
+                    </a>
+                </h2>
+
+                <p class="news-card__excerpt">
+                    A Fiocruz e o Movimento Negro Unificado (MNU-RJ) promovem o 1° Ciclo de Formação de Promotores Populares de Saúde Antirracista. O curso é gratuito e voltado para moradores dos territórios, representantes de instituições, coletivos locais e ONGs
+                </p>
+
+                <div class="news-card__footer">
+                    <div class="news-card__author">
+                        <img class="news-card__author-avatar" src="https://via.placeholder.com/40" alt="Avatar do Autor">
+                        <div class="news-card__author-info">
+                            <span class="news-card__author-name">Nome do Autor</span>
+                            <span class="news-card__author-role">Instituição</span>
+                        </div>
+                    </div>
+                    <a href="page-noticias-detalhe.html" class="news-card__button">Ler Notícia</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="news-card mb-5">
+            <div class="news-card__image-container">
+                <img src="assets/img/theme/light/city-1.jpg" alt="Projeto seleciona municípios para elaborar manual de intervenções urbanas para redução de riscos e desastres">
+            </div>
+
+            <div class="news-card__content">
+                <div class="news-card__meta-top">
+                    <span class="news-card__category">Notícias</span>
+                    <span class="news-card__date">Publicado em 17/04/2025 16:17</span>
+                </div>
+
+                <h2 class="news-card__title">
+                    <a href="page-noticias-detalhe.html" style="text-decoration: none; color: inherit;">
+                        Projeto seleciona municípios para elaborar manual de intervenções urbanas para redução de riscos e desastres
+                    </a>
+                </h2>
+
+                <p class="news-card__excerpt">
+                    Fiocruz e Ministério das Cidades convidam 50 municípios aptos para participar de seleção que prevê a validação de metodologias integradas e inovadoras. Objetivo é fortalecer as estratégias nacionais de planejamento para resiliência urbana
+                </p>
+
+                <div class="news-card__footer">
+                    <div class="news-card__author">
+                        <img class="news-card__author-avatar" src="https://via.placeholder.com/40" alt="Avatar do Autor">
+                        <div class="news-card__author-info">
+                            <span class="news-card__author-name">Nome do Autor</span>
+                            <span class="news-card__author-role">Instituição</span>
+                        </div>
+                    </div>
+                    <a href="page-noticias-detalhe.html" class="news-card__button">Ler Notícia</a>
+                </div>
+            </div>
+        </article>
       </section>
     </main>
     <!-- MAIN CONTENT END -->
